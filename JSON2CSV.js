@@ -1,7 +1,5 @@
 javascript: (async function () {
-  const selection = document.getSelection();
-
-  const text = selection.toString();
+  const text = await navigator.clipboard.readText();
 
   try {
     const json = JSON.parse(text);
